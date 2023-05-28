@@ -1,1 +1,74 @@
-hello22
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    #slideshow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #slideshow img {
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div id="slideshow">
+    <img src="screenshot (1).jpg" alt="Screenshot (1)">
+    <img src="screenshot (2).jpg" alt="Screenshot (2)">
+    <img src="screenshot (3).jpg" alt="Screenshot (3)">
+    <!-- Add more images here -->
+    <img src="screenshot (4).jpg" alt="Screenshot (4)">
+    <img src="screenshot (5).jpg" alt="Screenshot (5)">
+    <!-- Continue adding more images... -->
+    <img src="screenshot (69).jpg" alt="Screenshot (69)">
+    <img src="screenshot (70).jpg" alt="Screenshot (70)">
+    <!-- Adding 20 more images... -->
+    <img src="screenshot (71).jpg" alt="Screenshot (71)">
+    <img src="screenshot (72).jpg" alt="Screenshot (72)">
+    <img src="screenshot (73).jpg" alt="Screenshot (73)">
+    <img src="screenshot (74).jpg" alt="Screenshot (74)">
+    <img src="screenshot (75).jpg" alt="Screenshot (75)">
+    <img src="screenshot (76).jpg" alt="Screenshot (76)">
+    <img src="screenshot (77).jpg" alt="Screenshot (77)">
+    <img src="screenshot (78).jpg" alt="Screenshot (78)">
+    <img src="screenshot (79).jpg" alt="Screenshot (79)">
+    <img src="screenshot (80).jpg" alt="Screenshot (80)">
+    <img src="screenshot (81).jpg" alt="Screenshot (81)">
+    <img src="screenshot (82).jpg" alt="Screenshot (82)">
+    <img src="screenshot (83).jpg" alt="Screenshot (83)">
+    <img src="screenshot (84).jpg" alt="Screenshot (84)">
+    <img src="screenshot (85).jpg" alt="Screenshot (85)">
+    <img src="screenshot (86).jpg" alt="Screenshot (86)">
+    <img src="screenshot (87).jpg" alt="Screenshot (87)">
+    <img src="screenshot (88).jpg" alt="Screenshot (88)">
+    <img src="screenshot (89).jpg" alt="Screenshot (89)">
+    <img src="screenshot (90).jpg" alt="Screenshot (90)">
+  </div>
+
+  <script>
+    var images = document.querySelectorAll('#slideshow img');
+    var currentImage = 0;
+
+    function showImage() {
+      for (var i = 0; i < images.length; i++) {
+        images[i].style.display = 'none';
+      }
+      images[currentImage].style.display = 'block';
+      currentImage = (currentImage + 1) % images.length;
+      setTimeout(showImage, 3000); // Change image every 3 seconds
+    }
+
+    showImage();
+  </script>
+</body>
+</html>
